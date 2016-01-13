@@ -62,9 +62,14 @@ def load_data():
     test_images, test_labels, test_count   = load_mnist(test_images_filename, test_labels_filename)
 
     mnist = {}
-    mnist['images'] = np.append(train_images, test_images, axis=0)
-    mnist['labels'] = np.append(train_labels, test_labels, axis=0)
-    mnist['train_count'] = train_count
-    mnist['test_count'] = test_count
+    #mnist['images'] = np.append(train_images, test_images, axis=0)
+    #mnist['labels'] = np.append(train_labels, test_labels, axis=0)
+    #mnist['train_count'] = train_count
+    #mnist['test_count'] = test_count
+
+    mnist['train_images'] = train_images
+    mnist['train_labels'] = train_labels
+    mnist['test_images'] = test_images
+    mnist['test_labels'] = test_labels
 
     return mnist
