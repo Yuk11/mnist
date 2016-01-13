@@ -5,7 +5,8 @@ function download() {
   local filename="$(basename $url)"
 
   echo Downloading "$filename"
-  curl "${url}" -o "data/${filename}"
+  #curl "${url}" -o "data/${filename}"
+  wget "${url}" -P "data/"
 }
 
 download http://yann.lecun.com/exdb/mnist/train-images-idx3-ubyte.gz
